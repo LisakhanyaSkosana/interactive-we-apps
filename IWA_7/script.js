@@ -17,10 +17,9 @@ console.log('Good Morning, ${nickname}; || ${firstname}!')
 
 //Challenge 3
 
-{leoName} + {leoSurname} + ("Owed:" + "R") + {sarahBalance}{leoName} + {surname} + ("Owed:" + "R") + {sarahBalance}
---------------------------------------------------------------------
-Total amount owed: NaN
-----------------------------------
+
+
+
 
 
 
@@ -37,9 +36,15 @@ const divider = '----------------------------------'
 // Only change below this line
 
 const owed = parseInt('R' + leoBalance + sarahBalance);
-const leo = "{leoName} + {leoSurname} + \"Owed\" + \"R\" + {sarahBalance}";
-const sarah = "{leoName} + {surname} + \"Owed\" + \"R\" + {sarahBalance}";
+const leo = "{leoName} + {leoSurname} + \"Owed\" + \"R\" + {leoBalance}";
+const sarah = "{sarahName} + {sarahSurname} + \"Owed\" + \"R\" + {sarahBalance}";
 const total = "Total amount owed: ";
-const result = leo + sarah + divider + divider + total + owed + divider
+const result =
+ `${leo}
+ ${sarah}
+ ${divider}
+ ${total + owed} 
+  ${divider}`
 
 console.log(result)
+
